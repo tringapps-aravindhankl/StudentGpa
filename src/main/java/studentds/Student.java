@@ -1,5 +1,5 @@
 package studentds;
-
+import java.util.logging.*;
 import java.util.*;
 class StudentTest
 {
@@ -29,6 +29,7 @@ public class Student
 	public static void main( String[] args )
     {
         List <StudentTest> list  =new ArrayList<StudentTest>(); 
+        Logger log=Logger.getLogger("hi");
         int i = 1;
         scan = new Scanner(System.in);
         System.out.println("how many students details entered:");
@@ -36,20 +37,20 @@ public class Student
         
         while(i<=option){
         	
-        System.out.println("Enter Name");
+        log.info("Enter Name");
         String name=scan.next();
         
-        System.out.println("Enter Age");
+        log.info("Enter Age");
         int age=scan.nextInt();
         
-        System.out.println("Enter gpa");
+        log.info("Enter gpa");
         double gpa=scan.nextDouble();
         
         i++;
         
         list.add(new StudentTest(name,age,gpa));
         }
-        System.out.println("List the Students:");		
+        log.info("List the Students:");		
         for(int j=0;j<list.size();j++) {
         	System.out.print(list.get(j).getname()+" ");
         	System.out.print(list.get(j).getage()+" ");
