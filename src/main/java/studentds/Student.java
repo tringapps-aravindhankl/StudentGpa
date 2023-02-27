@@ -12,7 +12,7 @@ public class Student
         Logger log=Logger.getLogger("hi");
         int i = 1;
         scan = new Scanner(System.in);
-        System.out.println("how many students details entered:");
+        log.info("how many students details entered:");
         int option=scan.nextInt();
         
         while(i<=option){
@@ -45,7 +45,7 @@ public class Student
         });
         
         
-        System.out.println("Sorted List");
+        log.info("Sorted List");
         for(int j=0;j<list.size();j++) {
         	log.info(list.get(j).getname()+" ");
         	log.info(list.get(j).getage()+" ");
