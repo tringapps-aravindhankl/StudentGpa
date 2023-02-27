@@ -1,26 +1,6 @@
 package studentds;
 import java.util.logging.*;
 import java.util.*;
-class StudentTest
-{
-	private String name;
-	private int age;
-	private double gpa;
-	StudentTest(String name,int age,double gpa){
-		this.name=name;
-		this.age=age;
-		this.gpa=gpa;
-	}
-	String getname(){
-		return name;
-	}
-	int getage() {
-		return age;
-	}
-	double getgpa() {
-		return gpa;
-	}
-}
 
 public class Student 
 {
@@ -52,10 +32,10 @@ public class Student
         }
         log.info("List the Students:");		
         for(int j=0;j<list.size();j++) {
-        	System.out.print(list.get(j).getname()+" ");
-        	System.out.print(list.get(j).getage()+" ");
-        	System.out.print(list.get(j).getgpa()+" ");
-        	System.out.println("");
+        	log.info(list.get(j).getname()+" ");
+        	log.info(list.get(j).getage()+" ");
+        	log.info(list.get(j).getgpa()+" ");
+        	log.info("");
         }
         
         Collections.sort(list,new Comparator<StudentTest>(){
@@ -67,10 +47,10 @@ public class Student
         
         System.out.println("Sorted List");
         for(int j=0;j<list.size();j++) {
-        	System.out.print(list.get(j).getname()+" ");
-        	System.out.print(list.get(j).getage()+" ");
-        	System.out.print(list.get(j).getgpa()+" ");
-        	System.out.println("");
+        	log.info(list.get(j).getname()+" ");
+        	log.info(list.get(j).getage()+" ");
+        	log.info(list.get(j).getgpa()+" ");
+        	log.info("");
         }
         
     }
